@@ -234,9 +234,9 @@ public class UploadWorker extends ListenableWorker implements CountProgressListe
 
       OkHttpClient client =
           new OkHttpClient.Builder()
-              .connectTimeout((long) timeout, TimeUnit.SECONDS)
-              .writeTimeout((long) timeout, TimeUnit.SECONDS)
-              .readTimeout((long) timeout, TimeUnit.SECONDS)
+              .connectTimeout(timeout, TimeUnit.SECONDS)
+              .writeTimeout(timeout, TimeUnit.SECONDS)
+              .readTimeout(timeout, TimeUnit.SECONDS)
               .build();
 
       call = client.newCall(request);
